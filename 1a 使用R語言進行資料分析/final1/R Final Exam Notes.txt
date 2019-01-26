@@ -1,0 +1,97 @@
+R Final Exam
+Skills
+	ggplot2
+		x - y scatter plot
+		regression line for scatter plot
+	隨機抽樣 ?% 資料
+	read from .csv
+	Set Working Directory
+		
+	
+library(dplyr)
+library(magrittr)
+library(tidyr)
+library(ggplot2)
+
+	
+
+	
+-----
+Notes
+Introduction to R
+	Vectors
+		c()
+		vec = c(a=1, b=2, c=3)
+			vec[1] >> a 1
+			vec['a'] >> a 1
+		match()
+			vec = c('a','b','c','d')
+			match('b', vec) >> 2
+	Factors
+		categorical variable; limited number of categories
+		factor(x, levels = c(), ordered = TRUEorFALSE)
+		Change name of levels:
+			levels(factor_vec) = c()
+		summary()
+	DataFrame
+		data.frame(c(), c(), c(), c(), )
+		head(df)
+		str(df)		#investigate the structure
+		Selection
+			df[row_index, column_index]
+			df[row_index, ]
+			df[, column_index]
+			Can use column_name
+				ex: planet_df[1:5, 'diameter']
+				planet_df['diameter'] return type: dataframe
+			$ symbol
+				ex: planet_df$rings return type: vector
+			Selection based on TRUE or FALSE
+				rings_vector = c(TRUE, FALSE, ...)
+				planets_df[rings_vector, ]		select all columns when rings_vector is TRUE
+			How to extract the row with min or max values?
+				which.max(df$col_name)		returns the "index" of the row with maximum value 
+				which.min(df$col_name)
+				df[which.max(df$col_name), ]
+		subset()
+			subset(my_df, subset = some_condition logical expression, select = expression indicating columns to select from a data frame.)
+			subset(planets_df, subset = rings)
+			subset(planets_df, subset=diameter<1)
+		Create New Column
+			df$new_col_name = c()
+			df = cbind(df, c())
+		Delete Column
+			df$col_name = NULL
+			subset(df, select=c(-col_name, -col_name))
+	String Manipulation
+		sprintf()
+			print(sprintf('%s is %d cm tall.', 'Evan', 166)
+			%s 		string
+			%d		integer
+			%f 		floating number
+		strsplit(x, split=)
+			strsplit('I am Evan', split=' ')
+			strsplit('I am Evan', split='')
+
+dplyr
+	summary(df)
+	glimpse(df)
+	filter(df, conditions ... )
+		df[df$col_name conditions ... ]
+	arrange()
+	select()
+
+	
+	
+			
+
+
+
+
+
+
+
+
+
+
+			

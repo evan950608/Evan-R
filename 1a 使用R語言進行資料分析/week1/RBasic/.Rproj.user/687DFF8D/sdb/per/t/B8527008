@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "year1 <- 87:91\npower1 <- c(60000000, 61234562, 694817401, \n            71840244, 72840024)\npower2 <- c(50984502, 691048501, 6183951.12414,\n            9385029324, 121231412)\n\n# 找出年度 year1 中，用電量超過 7000000 的年份\nans1 <- year1[power1 > 7000000]\n\n# 計算 year1 這段時間的 power1 平均用電量\nans2 <- mean(power1)\n\n# 計算 year1 這段時間的 power1 用電量標準差\nans3 <- sd(power1)\n\n# 計算一筆數據的「標準分數」\n# 將數據減去平均數後除以標準差\n# 計算 year1 這段時間的 power1 用電標準分數\nans4 <- (power1 - mean(power1)) / sd(power1)\n\n# 計算 year1 這段時間的 power2 平均用電量\n# 計算 year1 這段時間的 power2 用電量標準差\n# 計算 year1 這段時間的 power2 用電標準分數\nans5 <- mean(power2)\nans6 <- sd(power2)\nans7 <- (power2 - mean(power2)) / sd(power2)\n\n# 找出 year1 這段時間\n# power1 超過 10% 的 power2 的年份\nans8 <- year1[power1 > 0.1 * power2]\n",
+    "created" : 1496672437317.000,
+    "dirty" : false,
+    "encoding" : "BIG5",
+    "folds" : "",
+    "hash" : "546368259",
+    "id" : "B8527008",
+    "lastKnownWriteTime" : 1496672982,
+    "last_content_update" : 1496672982570,
+    "path" : "C:/Users/pecu6/Desktop/RBasic/dataVector.R",
+    "project_path" : "dataVector.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
